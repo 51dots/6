@@ -4,10 +4,7 @@ import Link from "next/link";
 import styles from "./Navbar.module.css";
 import isle from "../../public/main/isle.png";
 import anon from "../../public/main/user.png";
-/**
- * Navigation bar that shows up on all pages.
- * Rendered in _app.tsx file above the page content.
- */
+
 export function Navbar() {
   const address = useAddress();
 
