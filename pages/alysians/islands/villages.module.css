@@ -1,0 +1,391 @@
+.navContainer {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  position: absolute;
+  padding: 0 24px;
+  margin-top: 150px;  
+}
+
+.navBox {
+  border-radius: 22px;
+  background-color: rgba(23, 0, 34, 0.365);
+  min-width: 300px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 40px;
+}
+
+.navBox:hover {
+  background-color: rgba(56, 4, 140, 0.3);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.imageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 22px;
+  background-color: rgba(33, 0, 48, 0.365);
+  min-width: 300px;
+  max-width: 2048px;
+  margin: 7px;
+  height: square;
+  width: 50%;
+  padding: 10px;
+}
+
+.imageBoxDescription {
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.descriptionText {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: justify; 
+}
+
+
+.rheaBox {
+  border-radius: 22px;
+  background-color: rgba(3, 106, 20, 0.365);
+  min-width: 300px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 40px;
+}
+
+.rheaBox {
+  border-radius: 22px;
+  background-color: rgba(3, 106, 20, 0.365);
+  min-width: 200px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 40px; 
+}
+.greenBox:hover {
+  background-color: rgba(56, 4, 140, 0.3);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.letheDescriptionContainer {
+  border-radius: 14px;
+  background-color: rgba(50, 0, 0, 0.365);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.letheBox {
+  border-radius: 22px;
+  background-color: rgba(50, 0, 0, 0.365);
+  min-width: 200px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 10px;
+}
+
+.hyperionDescriptionContainer {
+  border-radius: 14px;
+  background-color: rgba(255, 247, 136, 0.365);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.hyperionBox {
+  border-radius: 22px;
+  background-color: rgba(255, 247, 136, 0.365);
+  min-width: 200px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 10px;
+}
+
+.phoebeDescriptionContainer {
+  border-radius: 14px;
+  background-color: rgba(111, 3, 121, 0.365);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.phoebeBox {
+  border-radius: 22px;
+  background-color: rgba(111, 3, 121, 0.365);
+  min-width: 200px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 10px;
+}
+
+.theiaDescriptionContainer {
+  border-radius: 14px;
+  background-color: rgba(8, 3, 161, 0.365);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.theiaBox {
+  border-radius: 22px;
+  background-color: rgba(8, 3, 161, 0.365);
+  min-width: 200px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 10px;
+}
+
+.mnemosyneDescriptionContainer {
+  border-radius: 14px;
+  background-color: rgba(116, 184, 6, 0.365);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.mnemosyneBox {
+  border-radius: 22px;
+  background-color: rgba(116, 184, 6, 0.365);
+  min-width: 200px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 10px;
+  
+}
+
+.criusDescriptionContainer {
+  border-radius: 14px;
+  background-color: rgba(120, 72, 6, 0.365);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.criusBox {
+  border-radius: 22px;
+  background-color: rgba(120, 72, 0, 0.365);
+  min-width: 200px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 10px;
+  
+}
+
+.coeusDescriptionContainer {
+  border-radius: 14px;
+  background-color: rgba(29, 6, 110, 0.365);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.coeusBox {
+  border-radius: 22px;
+  background-color: rgba(29, 6, 110, 0.365);
+  min-width: 200px;
+  max-width: 600px;
+  margin: 7px;
+  height: square;
+  width: 24%;
+  padding: 10px;
+}
+
+.rheaDescriptionContainer {
+  border-radius: 14px;
+  background-color: rgba(3, 106, 20, 0.365);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.descriptionText {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: justify;
+  
+}
+
+
+.headerLogo {
+  vertical-align: top;
+}
+
+.h1 {
+  margin-bottom: 0px;
+}
+
+.explain {
+  font-size: 1.125rem;
+  max-width: 1200px;
+}
+
+.navBoxGrid {
+  width: 1200px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap; 
+  
+}
+
+.optionSelectBox {
+  border-radius: 14px;
+  border: 1px solid #ff9d3cb8;
+  width: 60%;
+  min-height: 200px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.selectBoxTitle {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  
+}
+
+/* Between 1200 and 800 */
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .nftBox {
+    width: 60%;
+    margin: 8px;
+    padding: 30;
+  }
+}
+
+/* beneath 800
+*/
+@media only screen and (max-width: 800px) {
+  .nftBoxGrid {
+    justify-content: center;
+  }
+  .nftBox {
+    width: 80%;
+    margin: 8px;
+    padding: 60;
+  }
+  .optionSelectBox {
+    width: 90%;
+    margin-top: 16px;
+  }
+}
+
+/* On Mobile, make tokenGrid 100% width */
+@media only screen and (max-width: 850px) {
+  .tokenItem {
+    width: 90%;
+    margin-top: 12px;
+  }
+}
+
+/* Screen less than 630, then hide .center */
+@media only screen and (max-width: 630px) {
+  .center {
+    display: none;
+  }
+}
+
+.spacerTop {
+  margin-top: 16px;
+}
+
+.bigSpacerTop {
+  margin-top: 32px;
+}
+
+.spacerBottom {
+  margin-bottom: 16px;
+}
+
+.detailPageHr {
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+.mainButton {
+  cursor: pointer;
+  display: inline-flex;
+  appearance: none;
+  align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  font-weight: 600;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-duration: 200ms;
+  height: 3rem;
+  min-width: 3rem;
+  font-size: 1rem;
+  background: #e5e5ea;
+  background-image: linear-gradient(to left, #290024 0%, #1d0041 101.52%);
+  color: #fff;
+  width: 180px;
+  text-align: center;
+  border-radius: 9999px;
+}
+
+.mainButton:hover {
+  opacity: 0.8;
+}
