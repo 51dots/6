@@ -1,53 +1,101 @@
 import type { NextPage } from "next";
-import styles from "../styles/Main.module.css";
-import NFTGrid from "../components/NFT/NFTGrid";
-import {
-  ConnectWallet,
-  Web3Button,
-  useAddress,
-  useContract,
-  useOwnedNFTs,
-} from "@thirdweb-dev/react";
-import { kaiDrop } from "../const/constants";
-import Container from "../components/Container/Container";
+import { useRouter } from "next/router";
+import Image from "next/legacy/image";
+import styles from "../components/Index.module.css";
 
-/**
- * The home page of the application.
- */
+interface LoadImageProps {
+  src: string;
+}
+
+const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
+  <Image
+    src={src}
+    alt="Andromaverse"
+    layout="responsive"
+    width={904}
+    height={209}
+    sizes="(max-width: 768px) 100vw, 50vw" // Set different sizes for different screen widths
+  />
+);
+
 const Home: NextPage = () => {
-  const address = useAddress();
-  const { contract: nftDropContract } = useContract(kaiDrop, "nft-drop");
-  const { data: nfts, isLoading } = useOwnedNFTs(nftDropContract, address);
+  const router = useRouter();
 
   return (
-    <Container maxWidth="lg">
-      {address ? (
-        <div className={styles.container}>
-          <h1>Ready Player</h1>
-          <p>Alysian Elite Citizen Upgrade</p>
-          <NFTGrid
-            nfts={nfts}
-            isLoading={isLoading}
-            emptyText={
-              "Looks like you don't own any NFTs. Did you import your contract on the thirdweb dashboard? https://thirdweb.com/dashboard"
-            }
+    <div className={styles.navContainer}>
+      {/* Top Logo */}
+      <div className={styles.imageBox}>
+        <LoadImage src="/main/escape.png" />
+      </div>
+
+      <div className={`${styles.navBoxGrid} navBoxGrid`}>
+        {/* About*/}
+        <div
+          className={styles.navImage}
+          role="button"
+          onClick={() => router.push(`/about`)}
+        >
+          <h2 className={styles.selectBoxTitle}>About Game</h2>
+          <Image
+            src="/gifs/sc0.gif"
+            alt="About"
+            width={121}
+            height={121}
+            sizes="(max-width: 768px) 50vw, 20vw" // Set different sizes for different screen widths
           />
-          <div className={styles.btnContainer}>
-            <Web3Button
-              contractAddress={kaiDrop}
-              action={async (contract) => await contract?.erc721.claim(1)}
-            >
-              Claim NFT
-            </Web3Button>
-          </div>
         </div>
-      ) : (
-        <div className={styles.container}>
-          <h2>Connect a personal wallet to view your owned NFTs</h2>
-          <ConnectWallet />
+        {/* Theia Playtest */}{" "}
+        {/*
+        <div
+          className={styles.navImage}
+          role="button"
+          onClick={() => router.push(`/about/playtest`)}
+        >
+          <h2 className={styles.selectBoxTitle}>Theia Playtest II</h2>
+          <Image
+            src="/islands/theia/observatory.png"
+            alt="Playtest"
+            width={121}
+            height={121}
+            sizes="(max-width: 768px) 50vw, 20vw" // Set different sizes for different screen widths
+          />
+          <Timer date={playDate} />
+          Prize For First
+        </div> 
+      */}
+        {/* Collectibles Page */}
+        <div
+          className={styles.navImage}
+          role="button"
+          onClick={() => router.push(`/collectibles`)}
+        >
+          <h2 className={styles.selectBoxTitle}>Collectibles</h2>
+          <Image
+            src="/gifs/ladf.gif"
+            alt="Collectibles"
+            width={121}
+            height={121}
+            sizes="(max-width: 768px) 50vw, 20vw" // Set different sizes for different screen widths
+          />
         </div>
-      )}
-    </Container>
+      </div>
+
+      {/* Quick Links */}
+      {/* <h2>Happening Now</h2>
+      <div className={styles.navGrid}>
+        <div className={styles.navBox}>
+          <Link href="/alysians/mint">Alysians Now Minting!</Link>
+        </div>
+         <div className={styles.navBox}>
+          <Link href="/listing/loot">Loot is Openable!</Link>
+        </div>    
+        <div className={styles.navBox}>
+          Ami Now Minting!
+          <Link href="/ami/mint"></Link>
+        </div>
+    
+      </div>*/}
+    </div>
   );
 };
 

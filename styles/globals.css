@@ -15,7 +15,15 @@ html {
 
 body {
   color: #ffffff;
-  background: #191c1f;
+  background: #010002;
+  background-image: linear-gradient(
+    270deg,
+    hsl(0, 0%, 0%) 0%,
+    hwb(0 14% 86%) 20%,
+    hsl(0, 0%, 7%) 50%,
+    hsl(268, 45%, 6%) 80%,
+    hsl(0, 0%, 14%) 100%
+  );
   --color-primary: #fada3f;
   --color-secondary: #ff2136;
   --color-tertiary: #0294fe;
@@ -23,6 +31,11 @@ body {
   --card-background: #252133;
   --highlighted-background: #202326;
   font-weight: 400;
+  font-family: var(--font);
+  color: var(--text-color);
+  display: center;
+  margin: 0;
+  text-align: center;
 }
 
 h1 {
@@ -42,3 +55,4 @@ a {
   color: inherit;
   text-decoration: none;
 }
+

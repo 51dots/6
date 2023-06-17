@@ -1,0 +1,113 @@
+.navContainer {
+  margin-top: 150px;
+}
+.navBoxGrid {
+  max-width: 95vw;
+  display: flex;
+  flex-direction: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -25px;
+  flex-wrap: wrap; 
+}
+.navGrid {
+  max-width: 95vw;
+  display: flex;
+  flex-direction: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: -15px;
+  margin-top: -15px;
+  flex-wrap: wrap; 
+}
+.navBox {
+  border-radius: 22px;
+  background-color: rgba(23, 0, 34, 0.365);
+  min-width: 200px;
+  margin: 7px;
+  height: square;
+  width: 0%;
+  padding: 40px;
+}
+.navBox:hover {
+  background-color: rgba(56, 4, 140, 0.3);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.imageBox {
+  display: center;
+  margin-top: -55px;
+  margin-bottom: -35px;
+  min-width: 300px;
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.navImage {
+  border-radius: 22px;
+  background-color: rgba(23, 0, 34, 0.365);
+  min-width: 200px;
+  margin: 7px;
+  margin-bottom: 40px;
+  height: square;
+  width: 0%;
+  padding: 40px;
+}
+.navImage:hover {
+  background-color: rgba(56, 4, 140, 0.3);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Styles for mobile */
+@media only screen and (max-width: 800px) {
+  .navImage {
+    width: 50%; 
+    min-height: 160px; 
+    padding: 20px; 
+  }
+  .imageBox {
+    display: center;
+    margin-top: -35px;
+    margin-bottom: -5px;
+    min-width: 300px;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+/* Styles for .navBox on larger screens */
+@media only screen and (min-width: 801px) {
+  .navImage {
+    width: 20%; 
+    min-height: 200px; 
+    padding: 40px; 
+  }
+}
+.mintBox {
+  border-radius: 77px;
+  background-color: rgba(52, 0, 69, 0.355);
+  min-width: 180px;
+  min-height: 160px;
+  margin: 2px;
+  width: 30%;
+  padding: 20px;
+}
+.mintBox:hover {
+  background-color: rgba(56, 4, 140, 0.3);
+  cursor: pointer;
+}
+.selectBoxTitle {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.selectBoxDescription {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0px;
+}
+
