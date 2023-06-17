@@ -1,0 +1,73 @@
+.container {
+  margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 0 24px;
+}
+
+.container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.container table td,
+.container table input {
+  border: 1px solid white;
+  padding: 8px;
+}
+
+.container table input {
+  text-align: left;
+}
+
+.Box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 22px;
+  background-color: rgba(51, 14, 68, 0.365);
+  min-width: 300px;
+  max-width: 2048px;
+  margin: 7px;
+  padding: 22px;
+  height: square;
+  width: 50%;
+}
+
+
+.mainButton {
+  cursor: pointer;
+  display: inline-flex;
+  appearance: none;
+  align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  font-weight: 600;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-duration: 200ms;
+  height: 3rem;
+  min-width: 3rem;
+  font-size: 1rem;
+  background: #e5e5ea;
+  background-image: linear-gradient(to left, #3c0435 0%, #290a4f 101.52%);
+  color: #fff;
+  width: 180px;
+  text-align: center;
+  border-radius: 9999px;
+}
+
+.mainButton:hover {
+  opacity: 0.8;
+}

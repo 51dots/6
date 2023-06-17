@@ -22,7 +22,6 @@ const Collectibles: NextPage = () => {
         >
           <h2 className={styles.selectBoxTitle}>Ami</h2>
           <Image src="/ami/astra.png" alt="artemisf" width={121} height={121} />
-          <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Alysians */}
         <div
