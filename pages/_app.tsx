@@ -6,8 +6,8 @@ import {
   walletConnect,
 } from "@thirdweb-dev/react";
 import "../styles/globals.css";
-import { Navbar } from "../components/Navbar/Navbar";
 import { activeChain } from "../const/constants";
+import { Navbar } from "../components/Navbar/Navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

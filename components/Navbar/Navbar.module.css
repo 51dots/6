@@ -8,21 +8,20 @@
   left: 0px;
   z-index: 3;
   background-color: transparent !important;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 .nav {
-  padding-left: 2em;
   padding-right: 2em;
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   align-items: center;
   justify-content: space-between;
-  width: 98%;
-  max-width: 1260px;
+  width: 100%;
+  max-width: 4000px;
   background-color: transparent !important;
 }
 
@@ -30,16 +29,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: 0px;
   transition: all 0.15s ease-in-out;
 }
 
 .navMiddle {
   display: flex;
-  margin-left: 12px;
+  margin-left: 10px;
   flex-direction: row;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
 .link {
@@ -93,3 +92,4 @@
     display: none !important;
   }
 }
+

@@ -1,16 +1,10 @@
-import {
-  MediaRenderer,
-  ThirdwebNftMedia,
-  useAddress,
-  useWallet,
-} from "@thirdweb-dev/react";
+import { MediaRenderer, useAddress, useWallet } from "@thirdweb-dev/react";
 import React, { useEffect, useState } from "react";
 import Container from "../../../components/Container/Container";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { NFT, ThirdwebSDK } from "@thirdweb-dev/sdk";
-import { activeChain, nftDropAddress } from "../../../const/constants";
+import { activeChain, kaiDrop } from "../../../const/constants";
 import styles from "../../../styles/Token.module.css";
-import { Toaster } from "react-hot-toast";
 import { Signer } from "ethers";
 import newSmartWallet from "../../../components/SmartWallet/SmartWallet";
 import SmartWalletConnected from "../../../components/SmartWallet/smartConnected";
@@ -53,12 +47,11 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
   return (
     <>
-      <Toaster position="bottom-center" reverseOrder={false} />
       <Container maxWidth="lg">
         <div className={styles.container}>
           <div className={styles.metadataContainer}>
-            <ThirdwebNftMedia
-              metadata={nft.metadata}
+            <MediaRenderer
+              src={`https://andromaverse.io/collection/ami/img/${nft.metadata.id}.gif`}
               className={styles.image}
             />
           </div>
@@ -66,20 +59,17 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
           <div className={styles.listingContainer}>
             {contractMetadata && (
               <div className={styles.contractMetadataContainer}>
-                <MediaRenderer
-                  src={contractMetadata.image}
-                  className={styles.collectionImage}
-                />
-                <p className={styles.collectionName}>{contractMetadata.name}</p>
+                <div></div>
               </div>
             )}
-            <h1 className={styles.title}>{nft.metadata.name}</h1>
-            <p className={styles.collectionName}>Token ID #{nft.metadata.id}</p>
+            <h1>Player Profile</h1>
+            <p className={styles.contractAddress}>{smartWalletAddress}</p>
+
             {smartWalletAddress ? (
               <SmartWalletConnected signer={signer} />
             ) : (
               <div className={styles.btnContainer}>
-                <p>Loading...</p>
+                <p>Coming Soon...</p>
               </div>
             )}
           </div>
@@ -94,7 +84,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const sdk = new ThirdwebSDK(activeChain);
 
-  const contract = await sdk.getContract(nftDropAddress);
+  const contract = await sdk.getContract(kaiDrop);
 
   const nft = await contract.erc721.get(tokenId);
 
@@ -116,14 +106,14 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const sdk = new ThirdwebSDK(activeChain);
 
-  const contract = await sdk.getContract(nftDropAddress);
+  const contract = await sdk.getContract(kaiDrop);
 
   const nfts = await contract.erc721.getAll();
 
   const paths = nfts.map((nft) => {
     return {
       params: {
-        contractAddress: nftDropAddress,
+        contractAddress: kaiDrop,
         tokenId: nft.metadata.id,
       },
     };

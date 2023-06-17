@@ -4,7 +4,7 @@ import {
   TWApiKey,
   factoryAddress,
   activeChain,
-  nftDropAddress,
+  kaiDrop,
   implementation,
 } from "../../const/constants";
 import { SmartContract, NFT } from "@thirdweb-dev/sdk";
@@ -27,7 +27,7 @@ export default function newSmartWallet(token: NFT) {
         const account = factory.prepare("createAccount", [
           implementation,
           activeChain.chainId,
-          nftDropAddress,
+          kaiDrop,
           token.metadata.id,
           0,
           ethers.utils.toUtf8Bytes("")
@@ -42,7 +42,7 @@ export default function newSmartWallet(token: NFT) {
         return factory.call("account", [
           implementation,
           activeChain.chainId,
-          nftDropAddress,
+          kaiDrop,
           token.metadata.id,
           0
         ]);
