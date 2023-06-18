@@ -1,4 +1,4 @@
-import { ThirdwebNftMedia } from "@thirdweb-dev/react";
+import { ThirdwebNftMedia, MediaRenderer } from "@thirdweb-dev/react";
 import { NFT } from "@thirdweb-dev/sdk";
 import React from "react";
 import styles from "./NFT.module.css";
@@ -11,8 +11,10 @@ type Props = {
 export default function NFTComponent({ nft }: Props) {
   return (
     <>
-      <ThirdwebNftMedia metadata={nft.metadata} className={styles.nftImage} />
-
+      <MediaRenderer
+        src={`https://andromaverse.io/collection/ami/img/${nft.metadata.id}.gif`}
+        className={styles.image}
+      />
       <p className={styles.nftName}>{nft.metadata.name}</p>
     </>
   );
