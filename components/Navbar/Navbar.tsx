@@ -42,26 +42,13 @@ export function Navbar() {
 
             <Link
               className={styles.link}
-              href={`https://andromaverse.io/about/playtest`}
-            >
-              <Image
-                src="/islands/theia/observatory.png"
-                className={styles.profileImage}
-                width={35}
-                height={35}
-                alt="Playtest"
-              />
-            </Link>
-
-            <Link
-              className={styles.link}
               href={`https://andromaverse.io/collectibles`}
             >
               <Image
                 src="/gifs/ladf.gif"
                 className={styles.profileImage}
-                width={40}
-                height={40}
+                width={43}
+                height={43}
                 alt="Collectibles"
               />
             </Link>

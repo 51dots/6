@@ -4,7 +4,7 @@ import React from "react";
 import { kaiDrop } from "../../const/constants";
 import Skeleton from "../Skeleton/Skeleton";
 import NFT from "./NFT";
-import styles from "../../styles/Main.module.css";
+import styles from "./NFT.module.css";
 
 type Props = {
   isLoading: boolean;
@@ -22,9 +22,9 @@ export default function NFTGrid({
   return (
     <div className={styles.nftGridContainer}>
       {isLoading ? (
-        [...Array(5)].map((_, index) => (
+        [...Array(4)].map((_, index) => (
           <div key={index} className={styles.nftContainer}>
-            <Skeleton key={index} width={"100%"} height="312px" />
+            <Skeleton key={index} width={"100%"} height="250px" />
           </div>
         ))
       ) : nfts && nfts.length > 0 ? (

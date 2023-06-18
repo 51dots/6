@@ -18,11 +18,11 @@ body {
   background: #010002;
   background-image: linear-gradient(
     270deg,
-    hsl(0, 0%, 0%) 0%,
-    hwb(0 14% 86%) 20%,
-    hsl(0, 0%, 7%) 50%,
-    hsl(268, 45%, 6%) 80%,
-    hsl(0, 0%, 14%) 100%
+    hsl(276, 100%, 7%) 0%,
+    hsl(276, 100%, 7%) 25%
+    hsl(0, 0%, 0%) 50%,
+    hsl(276, 100%, 7%) 75%
+    hsl(276, 100%, 7%) 100%
   );
   --color-primary: #fada3f;
   --color-secondary: #ff2136;

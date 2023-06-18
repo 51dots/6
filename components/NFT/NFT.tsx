@@ -13,7 +13,7 @@ export default function NFTComponent({ nft }: Props) {
     <>
       <MediaRenderer
         src={`https://andromaverse.io/collection/ami/img/${nft.metadata.id}.gif`}
-        className={styles.image}
+        className={styles.nftImage}
       />
       <p className={styles.nftName}>{nft.metadata.name}</p>
     </>
