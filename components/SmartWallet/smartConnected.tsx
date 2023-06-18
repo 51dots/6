@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  NATIVE_TOKENS,
   ThirdwebNftMedia,
   ThirdwebSDKProvider,
   useAddress,
@@ -11,18 +10,18 @@ import {
 import { useOwnedNFTs } from "@thirdweb-dev/react";
 import { Signer } from "ethers";
 import style from "../../styles/Token.module.css";
-import {
-  activeChain,
-  berryEdi,
-  kaiDrop,
-  drmnToken,
-} from "../../const/constants";
+import { activeChain, berryEdi, drmnToken } from "../../const/constants";
+import { toast } from "react-toastify";
+
+const toastStyle = {
+  background: "#333",
+  color: "#fff",
+};
 
 interface ConnectedProps {
   signer: Signer | undefined;
 }
 
-// ThirdwebSDKProvider is a wrapper component that provides the smart wallet signer and active chain to the Thirdweb SDK.
 const SmartWalletConnected: React.FC<ConnectedProps> = ({ signer }) => {
   return (
     <ThirdwebSDKProvider signer={signer} activeChain={activeChain}>
@@ -31,16 +30,34 @@ const SmartWalletConnected: React.FC<ConnectedProps> = ({ signer }) => {
   );
 };
 
-// This is the main component that shows the user's token bound smart wallet.
 const ClaimTokens = () => {
   const address = useAddress();
-  const { data: tokenBalance, isLoading: loadingBalance } = useBalance(kaiDrop);
+  const { data: tokenBalance, isLoading: loadingBalance } =
+    useBalance(drmnToken);
 
-  const { contract } = useContract(kaiDrop);
+  const { contract } = useContract(berryEdi);
   const { data: ownedNFTs, isLoading: ownedNFTsIsLoading } = useOwnedNFTs(
     contract,
     address
   );
+
+  const handleClaimNFT = async (contract: any) => {
+    try {
+      await contract.erc1155.claim(0, 1);
+      toast(`NFT Claimed!`, {
+        icon: "✅",
+        style: toastStyle,
+        position: "bottom-center",
+      });
+    } catch (e) {
+      console.log(e);
+      toast(`NFT Claim Failed! Reason: ${(e as any).reason}`, {
+        icon: "❌",
+        style: toastStyle,
+        position: "bottom-center",
+      });
+    }
+  };
 
   return (
     <div className={style.walletContainer}>
@@ -55,24 +72,8 @@ const ClaimTokens = () => {
                 contractAddress={berryEdi}
                 action={(contract) => contract.erc1155.claim(0, 1)}
               >
-                Claim a Berry
+                Accept
               </Web3Button>
-              {ownedNFTsIsLoading ? (
-                <h2>Loading NFTs...</h2>
-              ) : (
-                <div>
-                  {ownedNFTs && ownedNFTs.length > 0 ? (
-                    ownedNFTs.map((nft) => (
-                      <div key={nft.metadata.id}>
-                        <ThirdwebNftMedia metadata={nft.metadata} />
-                        <p>QTY: {nft.quantityOwned}</p>
-                      </div>
-                    ))
-                  ) : (
-                    <p>Maybe Later</p>
-                  )}
-                </div>
-              )}
             </div>
           )}
         </>

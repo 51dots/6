@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   const { data: nfts, isLoading } = useOwnedNFTs(nftDropContract, address);
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
       {address ? (
         <div className={styles.container}>
           <h1>Ready Player</h1>
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
               contractAddress={kaiDrop}
               action={async (contract) => await contract?.erc721.claim(1)}
             >
-              Claim NFT
+              Buy Elite Citizen Pack
             </Web3Button>
           </div>
         </div>
