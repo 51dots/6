@@ -15,7 +15,7 @@ export default function NFTComponent({ nft }: Props) {
         src={`https://andromaverse.io/collection/ami/img/${nft.metadata.id}.gif`}
         className={styles.nftImage}
       />
-      <p className={styles.nftName}>{nft.metadata.name}</p>
+      <p>{nft.metadata.name}</p>
     </>
   );
 }
