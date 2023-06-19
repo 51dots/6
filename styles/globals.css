@@ -15,15 +15,7 @@ html {
 
 body {
   color: #ffffff;
-  background: #010002;
-  background-image: linear-gradient(
-    270deg,
-    hsl(276, 100%, 7%) 0%,
-    hsl(276, 100%, 7%) 25%
-    hsl(0, 0%, 0%) 50%,
-    hsl(276, 100%, 7%) 75%
-    hsl(276, 100%, 7%) 100%
-  );
+  background: radial-gradient(circle, #000000 0%, #18171c 100%);
   --color-primary: #fada3f;
   --color-secondary: #ff2136;
   --color-tertiary: #0294fe;
@@ -56,3 +48,14 @@ a {
   text-decoration: none;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(8px); /* Adjust the blur strength as needed */
+  z-index: -1;
+}
