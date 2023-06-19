@@ -22,7 +22,7 @@ const Zero: React.FC = () => {
       </div>
       <div className={styles.box}>
         <div className={styles.nameContainer}>
-          <h1 className={styles.name}>Alysian Elite #0</h1>
+          <h1 className={styles.name}>Inventory</h1>
         </div>
         <div className={styles.tabs}>
           {" "}
