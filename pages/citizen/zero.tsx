@@ -4,7 +4,7 @@ import Squares from "./Squares";
 import styles from "./Citizen.module.css";
 
 const Zero: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("inventory");
+  const [activeTab, setActiveTab] = useState("bonded");
 
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
@@ -17,12 +17,12 @@ const Zero: React.FC = () => {
           <h1 className={styles.name}>Alysian Elite #0</h1>
         </div>
         <div className={styles.imageBox}>
-          <Squares src="/citizen/0.gif" />
+          <Squares src="/citizen/0.png" />
         </div>
       </div>
       <div className={styles.box}>
         <div className={styles.nameContainer}>
-          <h1 className={styles.name}>Inventory</h1>
+          <h1 className={styles.name}>Loadout</h1>
         </div>
         <div className={styles.tabs}>
           {" "}
@@ -38,11 +38,11 @@ const Zero: React.FC = () => {
             </div>
             <div
               className={`${styles.tab} ${
-                activeTab === "deed" ? styles.active : ""
+                activeTab === "bonded" ? styles.active : ""
               }`}
-              onClick={() => handleTabClick("deed")}
+              onClick={() => handleTabClick("bonded")}
             >
-              Deed
+              Bonded
             </div>
             <div
               className={`${styles.tab} ${
@@ -68,6 +68,42 @@ const Zero: React.FC = () => {
               0xc6e9bEF4658c6B4318c629B36ac153de3428A3A1
             </span>
             <div className={styles.gridContainer}>
+              {/* Render Bonded items */}
+              {activeTab === "bonded" && (
+                <>
+                  {" "}
+                  <a href="/citizen/pfp/0.png">
+                    <Image
+                      src="/citizen/pfp/0.png"
+                      alt="pfp"
+                      width={121}
+                      height={121}
+                      className={styles.roundedImage}
+                    />{" "}
+                  </a>
+                  <Image
+                    src="/collection/area/lethe.png"
+                    alt="lethe"
+                    width={121}
+                    height={121}
+                    className={styles.roundedImage}
+                  />
+                  <Image
+                    src="/collection/deed/land0.png"
+                    alt="lethe"
+                    width={121}
+                    height={121}
+                    className={styles.roundedImage}
+                  />
+                  <Image
+                    src="/collection/ami/astra/dragon.png"
+                    alt="astra"
+                    width={121}
+                    height={121}
+                    className={styles.roundedImage}
+                  />
+                </>
+              )}
               {activeTab === "inventory" && (
                 <>
                   <Image
@@ -77,7 +113,13 @@ const Zero: React.FC = () => {
                     height={121}
                   />
                   <Image
-                    src="/main/clock.png"
+                    src="/collection/item/berry.png"
+                    alt="clock"
+                    width={121}
+                    height={121}
+                  />
+                  <Image
+                    src="/collection/item/balletberry.png"
                     alt="clock"
                     width={121}
                     height={121}
@@ -94,26 +136,15 @@ const Zero: React.FC = () => {
                     width={121}
                     height={121}
                   />
-                </>
-              )}
-              {/* Render Deed items */}
-              {activeTab === "deed" && (
-                <>
-                  {" "}
                   <Image
-                    src="/islands/basecamp/base.png"
-                    alt="vixelice"
-                    width={121}
-                    height={121}
-                  />
-                  <Image
-                    src="/islands/basecamp/ship.png"
-                    alt="vixelice"
+                    src="/collection/item/lantern.png"
+                    alt="clock"
                     width={121}
                     height={121}
                   />
                 </>
               )}
+
               {/* Render Ami items */}
               {activeTab === "ami" && (
                 <>

@@ -65,7 +65,7 @@
 }
 
 .tab.active {
-  background-color: #b3800099;
+  background-color: #46007f99;
 }
 
 .inventoryContainer {
@@ -74,9 +74,13 @@
   display: grid;
   grid: flex;
   gap: 10px;
-  border: 2px solid #88888823;
+  border: 2px solid #88888800;
   min-height: 300px; /* Set minimum height to 300px */
   border-radius: 33px;
+}
+
+.roundedImage {
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
