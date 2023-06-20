@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./villages.module.css";
 import Link from "next/link";
 
@@ -19,7 +19,10 @@ const Lethe: NextPage = () => {
             alt="Yami Kuhina"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Necromancer */}
@@ -30,7 +33,10 @@ const Lethe: NextPage = () => {
             alt="Necromancer"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Scavenger */}
@@ -41,7 +47,10 @@ const Lethe: NextPage = () => {
             alt="Scavenger"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Witch */}
@@ -52,7 +61,10 @@ const Lethe: NextPage = () => {
             alt="Witch"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Youth */}
@@ -63,7 +75,10 @@ const Lethe: NextPage = () => {
             alt="Collector"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "../../components/Index.module.css";
 
 const Alysians: NextPage = () => {
@@ -21,7 +21,15 @@ const Alysians: NextPage = () => {
           onClick={() => router.push(`/alysians/mint`)}
         >
           <h1 className={styles.selectBoxTitle}>Mint</h1>
-          <Image src="/gifs/ladf.gif" alt="Lad" width={121} height={121} />
+          <Image
+            src="/gifs/ladf.gif"
+            alt="Lad"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -37,7 +45,10 @@ const Alysians: NextPage = () => {
             alt="villages"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Staking */}
@@ -47,7 +58,15 @@ const Alysians: NextPage = () => {
           onClick={() => router.push(`/alysians/stake`)}
         >
           <h2 className={styles.selectBoxTitle}>Stake</h2>
-          <Image src="/main/land.png" alt="stake" width={121} height={121} />
+          <Image
+            src="/main/land.png"
+            alt="stake"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Loot Page */}
@@ -57,7 +76,15 @@ const Alysians: NextPage = () => {
           onClick={() => router.push(`/listing/loot`)}
         >
           <h2 className={styles.selectBoxTitle}>Droman Loot</h2>
-          <Image src="/main/lootc.png" alt="loot" width={121} height={121} />
+          <Image
+            src="/main/lootc.png"
+            alt="loot"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
     </div>

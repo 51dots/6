@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "../../components/Index.module.css";
 
 const More: NextPage = () => {
@@ -18,7 +18,15 @@ const More: NextPage = () => {
           onClick={() => router.push(`/more/delegate`)}
         >
           <h2 className={styles.selectBoxTitle}>Delegate</h2>
-          <Image src="/stars.png" alt="store" width={88} height={88} />
+          <Image
+            src="/stars.png"
+            alt="store"
+            width={88}
+            height={88}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
 
           <p className={styles.selectBoxDescription}></p>
         </div>
@@ -39,7 +47,10 @@ const More: NextPage = () => {
             alt="Ship"
             width={88}
             height={88}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
 
           <p className={styles.selectBoxDescription}></p>
         </div>
@@ -51,7 +62,15 @@ const More: NextPage = () => {
           onClick={() => router.push(`more/merch`)}
         >
           <h2 className={styles.selectBoxTitle}>Merch</h2>
-          <Image src="/merch.png" alt="merch" width={88} height={88} />
+          <Image
+            src="/merch.png"
+            alt="merch"
+            width={88}
+            height={88}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
 
           <p className={styles.selectBoxDescription}></p>
         </div>
@@ -63,7 +82,15 @@ const More: NextPage = () => {
           onClick={() => router.push(`/more`)}
         >
           <h2 className={styles.selectBoxTitle}>Docs</h2>
-          <Image src="/book.png" alt="docs" width={88} height={88} />
+          <Image
+            src="/book.png"
+            alt="docs"
+            width={88}
+            height={88}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
       </div>

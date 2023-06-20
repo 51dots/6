@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./villages.module.css";
 import Link from "next/link";
 
@@ -9,7 +9,16 @@ interface LoadImageProps {
 }
 
 const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
-  <Image src={src} alt="load" layout="responsive" width={160} height={90} />
+  <Image
+    src={src}
+    alt="load"
+    width={160}
+    height={90}
+    sizes="100vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 
 const Theia: NextPage = () => {
@@ -45,7 +54,10 @@ const Theia: NextPage = () => {
             alt="Elder Sorcerer"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Mage */}
@@ -56,7 +68,10 @@ const Theia: NextPage = () => {
             alt="Mage"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Warlock */}
@@ -67,7 +82,10 @@ const Theia: NextPage = () => {
             alt="Warlock"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Wizard */}
@@ -78,7 +96,10 @@ const Theia: NextPage = () => {
             alt="Wizard"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Apprentice */}
@@ -89,7 +110,10 @@ const Theia: NextPage = () => {
             alt="Apprentice"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Youth */}
@@ -100,7 +124,10 @@ const Theia: NextPage = () => {
             alt="alyinfo"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
       </div>

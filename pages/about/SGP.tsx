@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./story.module.css";
 import Timer from "../../components/Timer/timer";
 import { sgpDate } from "../../components/constant";
@@ -10,7 +10,16 @@ interface LoadImageProps {
 }
 
 const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
-  <Image src={src} alt="load" layout="responsive" width={500} height={270} />
+  <Image
+    src={src}
+    alt="load"
+    width={500}
+    height={270}
+    sizes="100vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 
 const SGP: NextPage = () => {
@@ -52,7 +61,10 @@ const SGP: NextPage = () => {
             alt="History"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Hume */}
@@ -66,7 +78,15 @@ const SGP: NextPage = () => {
           }
         >
           <h2 className={styles.selectBoxTitle}>Hume</h2>
-          <Image src="/gifs/sc0.gif" alt="Hume" width={121} height={121} />
+          <Image
+            src="/gifs/sc0.gif"
+            alt="Hume"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         {/* Places */}
         <div
@@ -75,7 +95,15 @@ const SGP: NextPage = () => {
           onClick={() => router.push(`/alysians/islands`)}
         >
           <h2 className={styles.selectBoxTitle}>Places</h2>
-          <Image src="/main/logo.png" alt="Places" width={121} height={121} />
+          <Image
+            src="/main/logo.png"
+            alt="Places"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Ami */}
@@ -85,7 +113,15 @@ const SGP: NextPage = () => {
           onClick={() => router.push(`/ami/species`)}
         >
           <h2 className={styles.selectBoxTitle}>Ami</h2>
-          <Image src="/ami/smoothome.png" alt="Ami" width={121} height={121} />
+          <Image
+            src="/ami/smoothome.png"
+            alt="Ami"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Enfer */}
@@ -95,7 +131,15 @@ const SGP: NextPage = () => {
           onClick={() => router.push(`/game/enfer`)}
         >
           <h2 className={styles.selectBoxTitle}>Enfer</h2>
-          <Image src="/enfer/guard.png" alt="Enfer" width={121} height={121} />
+          <Image
+            src="/enfer/guard.png"
+            alt="Enfer"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
       </div>
@@ -113,7 +157,10 @@ const SGP: NextPage = () => {
           width={33}
           height={33}
           alt="Discord"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </a>
 
       {/* Playtest */}
@@ -128,7 +175,10 @@ const SGP: NextPage = () => {
           alt="playtest"
           width={121}
           height={121}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <p className={styles.selectBoxDescription}> Starts In</p>
         <Timer date={sgpDate} />
       </div>

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "../components/Index.module.css";
 
 const Collectibles: NextPage = () => {
@@ -21,7 +21,15 @@ const Collectibles: NextPage = () => {
           onClick={() => router.push(`/ami/`)}
         >
           <h2 className={styles.selectBoxTitle}>Ami</h2>
-          <Image src="/ami/astra.png" alt="artemisf" width={121} height={121} />
+          <Image
+            src="/ami/astra.png"
+            alt="artemisf"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         {/* Alysians */}
         <div
@@ -30,7 +38,15 @@ const Collectibles: NextPage = () => {
           onClick={() => router.push(`/alysians/`)}
         >
           <h1 className={styles.selectBoxTitle}>Alysians</h1>
-          <Image src="/gifs/ladf.gif" alt="ladf" width={121} height={121} />
+          <Image
+            src="/gifs/ladf.gif"
+            alt="ladf"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Ship */}
@@ -50,7 +66,10 @@ const Collectibles: NextPage = () => {
               alt="Ship"
               width={88}
               height={88}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           {/* Loot Page */}
           <div
@@ -59,7 +78,15 @@ const Collectibles: NextPage = () => {
             onClick={() => router.push(`/listing/loot`)}
           >
             <h2 className={styles.selectBoxTitle}>Droman Loot</h2>
-            <Image src="/main/lootc.png" alt="loot" width={121} height={121} />
+            <Image
+              src="/main/lootc.png"
+              alt="loot"
+              width={121}
+              height={121}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           {/* Merch */}
           <div className={styles.navBoxGrid}></div>
@@ -69,7 +96,15 @@ const Collectibles: NextPage = () => {
             onClick={() => router.push(`/collectibles`)}
           >
             <h2 className={styles.selectBoxTitle}>Merch</h2>
-            <Image src="/gifs/zed.gif" alt="merch" width={88} height={88} />
+            <Image
+              src="/gifs/zed.gif"
+              alt="merch"
+              width={88}
+              height={88}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <p className={styles.selectBoxDescription}>Coming Soon</p>
           </div>
         </div>

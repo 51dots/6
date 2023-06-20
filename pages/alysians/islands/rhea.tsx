@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./villages.module.css";
 import Link from "next/link";
 
@@ -8,7 +8,16 @@ interface LoadImageProps {
 }
 
 const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
-  <Image src={src} alt="load" layout="responsive" width={160} height={90} />
+  <Image
+    src={src}
+    alt="load"
+    width={160}
+    height={90}
+    sizes="100vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 const Rhea: NextPage = () => {
   return (
@@ -38,7 +47,10 @@ const Rhea: NextPage = () => {
             alt="Great Mother"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Leader</p>
         </div>
         {/* Archer */}
@@ -49,7 +61,10 @@ const Rhea: NextPage = () => {
             alt="stake"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Military</p>
         </div>
 
@@ -61,7 +76,10 @@ const Rhea: NextPage = () => {
             alt="maiden"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Citizen</p>
         </div>
         {/* Wanderer */}
@@ -72,7 +90,10 @@ const Rhea: NextPage = () => {
             alt="wanderer"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Citizen</p>
         </div>
         {/* Farmer */}
@@ -83,7 +104,10 @@ const Rhea: NextPage = () => {
             alt="farmer"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Citizen</p>
         </div>
 
@@ -95,7 +119,10 @@ const Rhea: NextPage = () => {
             alt="alyinfo"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Youth</p>
         </div>
       </div>

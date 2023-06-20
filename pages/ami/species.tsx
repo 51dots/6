@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./ami.module.css";
 import Link from "next/link";
 
@@ -27,28 +27,60 @@ const Species: NextPage = () => {
         role="button"
         onClick={() => router.push(`/ami/species/astra`)}>
           <h2 className={styles.selectBoxTitle}>Astra</h2>
-          <Image src="/ami/astra.png" alt="astra" width={121} height={121} />
+          <Image
+            src="/ami/astra.png"
+            alt="astra"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
  {/* Smoot */}
         <div className={styles.Box} role="button"
           onClick={() => router.push(`/ami/species/smoot`)}>
           <h2 className={styles.selectBoxTitle}>Smoot</h2>
-          <Image src="/ami/smoote.png" alt="Smoot" width={121} height={121} />
+          <Image
+            src="/ami/smoote.png"
+            alt="Smoot"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
   {/* Vixel */}
                 <div className={styles.Box} role="button"
           onClick={() => router.push(`/ami/species/vixel`)}>
           <h2 className={styles.selectBoxTitle}>Vixel</h2>
-          <Image src="/ami/vixeli.png" alt="Vixel" width={121} height={121} />
+          <Image
+            src="/ami/vixeli.png"
+            alt="Vixel"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
   {/* Artemis */}
           <div className={styles.Box} role="button"
           onClick={() => router.push(`/ami/species/artemis`)}>
           <h2 className={styles.selectBoxTitle}>Artemis</h2>
-          <Image src="/ami/artemisf.png" alt="Asrtemis" width={121} height={121} />
+          <Image
+            src="/ami/artemisf.png"
+            alt="Asrtemis"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -56,7 +88,15 @@ const Species: NextPage = () => {
              <div className={styles.Box} role="button"
           onClick={() => router.push(`/ami/species/prime`)}>
           <h2 className={styles.selectBoxTitle}>Prime</h2>
-          <Image src="/ami/primel.png" alt="Prime" width={121} height={121} />
+          <Image
+            src="/ami/primel.png"
+            alt="Prime"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p></div>
           </div>
 

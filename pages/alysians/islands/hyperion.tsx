@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./villages.module.css";
 import Link from "next/link";
 
@@ -22,7 +22,10 @@ const Hyperion: NextPage = () => {
             alt="Archon"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Leader</p>
         </div>
         {/* Kuhina */}
@@ -33,7 +36,10 @@ const Hyperion: NextPage = () => {
             alt="Kuhina"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Thought</p>
         </div>
         {/* Zealot */}
@@ -44,7 +50,10 @@ const Hyperion: NextPage = () => {
             alt="Zealot"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Thought</p>
         </div>
         {/* Scholar */}
@@ -55,7 +64,10 @@ const Hyperion: NextPage = () => {
             alt="Scholar"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Thought</p>
         </div>
         {/* Guard */}
@@ -66,7 +78,10 @@ const Hyperion: NextPage = () => {
             alt="Guard"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Military</p>
         </div>
         {/* Farmer */}
@@ -77,7 +92,10 @@ const Hyperion: NextPage = () => {
             alt="Farmer"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Citizen</p>
         </div>
         {/* Youth */}
@@ -88,7 +106,10 @@ const Hyperion: NextPage = () => {
             alt="Youth"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Youth</p>
         </div>
       </div>

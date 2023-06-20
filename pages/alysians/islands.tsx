@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./islands/villages.module.css";
 import Link from "next/link";
 
@@ -9,7 +9,16 @@ interface LoadImageProps {
 }
 
 const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
-  <Image src={src} alt="load" layout="responsive" width={160} height={90} />
+  <Image
+    src={src}
+    alt="load"
+    width={160}
+    height={90}
+    sizes="100vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 
 const Islands: NextPage = () => {
@@ -43,7 +52,10 @@ const Islands: NextPage = () => {
             alt="Rhea"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Theia */}
@@ -58,7 +70,10 @@ const Islands: NextPage = () => {
             alt="Theia"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Mnemosyne */}
@@ -73,7 +88,10 @@ const Islands: NextPage = () => {
             alt="Mnemosyne"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Coeus */}
@@ -88,7 +106,10 @@ const Islands: NextPage = () => {
             alt="Coeus"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Phoebe */}
@@ -103,7 +124,10 @@ const Islands: NextPage = () => {
             alt="Phoebe"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Crius */}
@@ -118,7 +142,10 @@ const Islands: NextPage = () => {
             alt="Crius"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Hyperion */}
@@ -133,7 +160,10 @@ const Islands: NextPage = () => {
             alt="Hyperion"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Lethe */}
@@ -148,7 +178,10 @@ const Islands: NextPage = () => {
             alt="Yamikuhina"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Dweller */}
@@ -163,7 +196,10 @@ const Islands: NextPage = () => {
             alt="Dweller"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
       </div>

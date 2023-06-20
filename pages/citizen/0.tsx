@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Squares from "./Squares";
 import styles from "./Citizen.module.css";
 
@@ -22,7 +22,7 @@ const Zero: React.FC = () => {
       </div>
       <div className={styles.box}>
         <div className={styles.nameContainer}>
-          <h1 className={styles.name}>Loadout</h1>
+          <h1 className={styles.name}>AC0 Loadout</h1>
         </div>
         <div className={styles.tabs}>
           {" "}
@@ -79,6 +79,10 @@ const Zero: React.FC = () => {
                       width={121}
                       height={121}
                       className={styles.roundedImage}
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />{" "}
                   </a>
                   <Image
@@ -87,6 +91,10 @@ const Zero: React.FC = () => {
                     width={121}
                     height={121}
                     className={styles.roundedImage}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/collection/deed/land0.png"
@@ -94,6 +102,10 @@ const Zero: React.FC = () => {
                     width={121}
                     height={121}
                     className={styles.roundedImage}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/collection/ami/chaos/magicc.png"
@@ -101,6 +113,10 @@ const Zero: React.FC = () => {
                     width={121}
                     height={121}
                     className={styles.roundedImage}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                 </>
               )}
@@ -111,36 +127,60 @@ const Zero: React.FC = () => {
                     alt="book"
                     width={121}
                     height={121}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/collection/item/berry.png"
                     alt="clock"
                     width={121}
                     height={121}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/collection/item/balletberry.png"
                     alt="clock"
                     width={121}
                     height={121}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/main/bottle.png"
                     alt="vixelice"
                     width={121}
                     height={121}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/main/charon.png"
                     alt="vixelice"
                     width={121}
                     height={121}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/collection/item/lantern.png"
                     alt="clock"
                     width={121}
                     height={121}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                 </>
               )}
@@ -154,12 +194,20 @@ const Zero: React.FC = () => {
                     alt="artemisf"
                     width={121}
                     height={121}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/ami/vixelice.png"
                     alt="vixelice"
                     width={121}
                     height={121}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                 </>
               )}

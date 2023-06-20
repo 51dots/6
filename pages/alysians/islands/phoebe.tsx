@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./villages.module.css";
 import Link from "next/link";
 
@@ -29,7 +29,10 @@ const Phoebe: NextPage = () => {
             alt="chief"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Leader</p>
         </div>
         {/* Mage  */}
@@ -40,7 +43,10 @@ const Phoebe: NextPage = () => {
             alt="Mage"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Thought</p>
         </div>
         {/* Scientist */}
@@ -51,7 +57,10 @@ const Phoebe: NextPage = () => {
             alt="Wanderer"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Citizen</p>
         </div>
         {/* Archer */}
@@ -62,7 +71,10 @@ const Phoebe: NextPage = () => {
             alt="Archer"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Military</p>
         </div>
         {/* Youth */}
@@ -73,7 +85,10 @@ const Phoebe: NextPage = () => {
             alt="Youth"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Youth</p>
         </div>
       </div>

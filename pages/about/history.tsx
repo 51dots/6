@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./story.module.css";
 import Link from "next/link";
 
@@ -8,7 +8,16 @@ interface LoadImageProps {
 }
 
 const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
-  <Image src={src} alt="load" layout="responsive" width={500} height={270} />
+  <Image
+    src={src}
+    alt="load"
+    width={500}
+    height={270}
+    sizes="100vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 
 const History: NextPage = () => {
@@ -21,7 +30,10 @@ const History: NextPage = () => {
           alt="Nebuchadnezzar"
           width={300}
           height={300}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <p className={styles.imageBoxDescription}>
           <p className={styles.descriptionText}>
             In the vast tapestry of cosmic history, the protagonist, Leuko, was

@@ -12,7 +12,7 @@ import { BigNumber, ethers } from "ethers";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import NFTCard from "../../components/NFT/NFTCard";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import {
   alysianContract,
   alysianStaking,
@@ -67,7 +67,15 @@ const Stake: NextPage = () => {
       <h1 className={styles.h1}>
         {" "}
         Let your Alysian enjoy their home land and find you <b>Dromans</b>
-        <Image src="/gifs/ladb.gif" alt="store" width={44} height={44} />
+        <Image
+          src="/gifs/ladb.gif"
+          alt="store"
+          width={44}
+          height={44}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </h1>
       <hr className={`${styles.divider} ${styles.spacerTop}`} />
 
@@ -76,9 +84,25 @@ const Stake: NextPage = () => {
       ) : (
         <>
           <h2>
-            <Image src="/main/drmn.png" alt="store" width={33} height={33} />{" "}
+            <Image
+              src="/main/drmn.png"
+              alt="store"
+              width={33}
+              height={33}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />{" "}
             Your Bank{" "}
-            <Image src="/main/drmn.png" alt="store" width={33} height={33} />
+            <Image
+              src="/main/drmn.png"
+              alt="store"
+              width={33}
+              height={33}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </h2>
           <div className={styles.navBoxGrid}>
             <div className={styles.tokenItem}>

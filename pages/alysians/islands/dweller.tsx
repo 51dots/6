@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./villages.module.css";
 import Link from "next/link";
 
@@ -8,7 +8,16 @@ interface LoadImageProps {
 }
 
 const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
-  <Image src={src} alt="load" layout="responsive" width={160} height={90} />
+  <Image
+    src={src}
+    alt="load"
+    width={160}
+    height={90}
+    sizes="100vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 
 const Dweller: NextPage = () => {
@@ -41,7 +50,10 @@ const Dweller: NextPage = () => {
             alt="Elder Professor"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Leader</p>
         </div>
         {/* Scholar  */}
@@ -52,7 +64,10 @@ const Dweller: NextPage = () => {
             alt="Scholar"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Thought</p>
         </div>
         {/* Scientist */}
@@ -63,7 +78,10 @@ const Dweller: NextPage = () => {
             alt="Scientist"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Thought</p>
         </div>
         {/* Soldier */}
@@ -74,7 +92,10 @@ const Dweller: NextPage = () => {
             alt="Soldier"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Military</p>
         </div>
         {/* Youth */}
@@ -85,7 +106,10 @@ const Dweller: NextPage = () => {
             alt="Youth"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Youth</p>
         </div>
       </div>

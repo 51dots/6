@@ -1,5 +1,5 @@
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 import isle from "../../public/main/isle.png";
@@ -13,7 +13,15 @@ export function Navbar() {
       <nav className={styles.nav}>
         <div className={styles.navLeft}>
           <Link href="/" className={`${styles.homeLink} ${styles.navLeft}`}>
-            <Image src={isle} width={72} height={72} alt="Smoot" />
+            <Image
+              src={isle}
+              width={72}
+              height={72}
+              alt="Smoot"
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </Link>
 
           <div className={styles.navMiddle}>
@@ -24,7 +32,10 @@ export function Navbar() {
                 width={30}
                 height={30}
                 alt="Home"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </Link>
 
             <Link
@@ -37,7 +48,10 @@ export function Navbar() {
                 width={37}
                 height={37}
                 alt="About"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </Link>
 
             <Link
@@ -50,7 +64,10 @@ export function Navbar() {
                 width={43}
                 height={43}
                 alt="Collectibles"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </Link>
           </div>
         </div>
@@ -70,7 +87,10 @@ export function Navbar() {
                 width={40}
                 height={40}
                 alt="Profile"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </Link>
           )}
         </div>

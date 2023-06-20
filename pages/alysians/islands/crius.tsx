@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./villages.module.css";
 import Link from "next/link";
 
@@ -30,7 +30,10 @@ const Crius: NextPage = () => {
             alt="Fire Chief"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Leader</p>
         </div>
         {/* Military */}
@@ -41,7 +44,10 @@ const Crius: NextPage = () => {
             alt="Shaman"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Military</p>
         </div>
         {/* Mech */}
@@ -52,7 +58,10 @@ const Crius: NextPage = () => {
             alt="Blacksmith"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Citizen</p>
         </div>
         {/* Spy */}
@@ -63,7 +72,10 @@ const Crius: NextPage = () => {
             alt="Shaman"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Thought</p>
         </div>
 
@@ -75,7 +87,10 @@ const Crius: NextPage = () => {
             alt="Young Flame"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Youth</p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./villages.module.css";
 import Link from "next/link";
 
@@ -29,7 +29,10 @@ const Coeus: NextPage = () => {
             alt="Sorcerer"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* High Templar */}
@@ -40,7 +43,10 @@ const Coeus: NextPage = () => {
             alt="High Templar"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Monk */}
@@ -51,7 +57,10 @@ const Coeus: NextPage = () => {
             alt="Monk"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Samurai */}
@@ -62,7 +71,10 @@ const Coeus: NextPage = () => {
             alt="Samurai"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Spy */}
@@ -73,7 +85,10 @@ const Coeus: NextPage = () => {
             alt="Spy"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -85,7 +100,10 @@ const Coeus: NextPage = () => {
             alt="Star"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./story.module.css";
 import Timer from "../../components/Timer/timer";
 import { demoDate } from "../../components/constant";
@@ -10,7 +10,16 @@ interface LoadImageProps {
 }
 
 const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
-  <Image src={src} alt="load" layout="responsive" width={500} height={270} />
+  <Image
+    src={src}
+    alt="load"
+    width={500}
+    height={270}
+    sizes="100vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 
 const Demo: NextPage = () => {
@@ -43,7 +52,10 @@ const Demo: NextPage = () => {
             alt="Leuko"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -54,7 +66,15 @@ const Demo: NextPage = () => {
           onClick={() => router.push(`/about/items/charon`)}
         >
           <h2 className={styles.selectBoxTitle}>Charon Stone</h2>
-          <Image src="/main/charon.png" alt="Charon" width={121} height={121} />
+          <Image
+            src="/main/charon.png"
+            alt="Charon"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -70,7 +90,10 @@ const Demo: NextPage = () => {
             alt="Arnav"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Basecamp */}
@@ -85,7 +108,10 @@ const Demo: NextPage = () => {
             alt="Base Camp"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         {/* Rhea */}
         <div
@@ -99,7 +125,10 @@ const Demo: NextPage = () => {
             alt="Tree House"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
 
         {/* Theia */}
@@ -114,7 +143,10 @@ const Demo: NextPage = () => {
             alt="Observatory"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -130,7 +162,10 @@ const Demo: NextPage = () => {
             alt="Clocktower"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
 
         {/* History */}
@@ -145,7 +180,10 @@ const Demo: NextPage = () => {
             alt="History"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -156,7 +194,15 @@ const Demo: NextPage = () => {
           onClick={() => router.push(`/ami/species`)}
         >
           <h2 className={styles.selectBoxTitle}>Ami</h2>
-          <Image src="/ami/smoothome.png" alt="Ami" width={121} height={121} />
+          <Image
+            src="/ami/smoothome.png"
+            alt="Ami"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Enfer */}
@@ -166,7 +212,15 @@ const Demo: NextPage = () => {
           onClick={() => router.push(`/game/enfer`)}
         >
           <h2 className={styles.selectBoxTitle}>Enfer</h2>
-          <Image src="/enfer/guard.png" alt="Enfer" width={121} height={121} />
+          <Image
+            src="/enfer/guard.png"
+            alt="Enfer"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
       </div>
@@ -186,7 +240,10 @@ const Demo: NextPage = () => {
           width={33}
           height={33}
           alt="Discord"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </a>
       <p>More Astras to Mint On the Way</p>
       {/* Playtest */}
@@ -198,7 +255,15 @@ const Demo: NextPage = () => {
         <h2 className={styles.selectBoxTitle}>
           Closed Beta Playtest for Ami Holders
         </h2>
-        <Image src="/ami/astra.png" alt="playtest" width={121} height={121} />
+        <Image
+          src="/ami/astra.png"
+          alt="playtest"
+          width={121}
+          height={121}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <p className={styles.selectBoxDescription}>Starts In</p>
         <Timer date={demoDate} />
       </div>

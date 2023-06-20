@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./story.module.css";
 
 interface LoadImageProps {
@@ -8,7 +8,16 @@ interface LoadImageProps {
 }
 
 const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
-  <Image src={src} alt="load" layout="responsive" width={500} height={270} />
+  <Image
+    src={src}
+    alt="load"
+    width={500}
+    height={270}
+    sizes="100vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 
 const Playtest: NextPage = () => {
@@ -55,7 +64,10 @@ const Playtest: NextPage = () => {
             alt="Leuko"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Theia */}
@@ -70,7 +82,10 @@ const Playtest: NextPage = () => {
             alt="Observatory"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -81,7 +96,15 @@ const Playtest: NextPage = () => {
           onClick={() => router.push(`/about/items/charon`)}
         >
           <h2 className={styles.selectBoxTitle}>Charon Stone</h2>
-          <Image src="/main/charon.png" alt="Charon" width={121} height={121} />
+          <Image
+            src="/main/charon.png"
+            alt="Charon"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -97,7 +120,10 @@ const Playtest: NextPage = () => {
             alt="Arnav"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -113,7 +139,10 @@ const Playtest: NextPage = () => {
             alt="History"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -124,7 +153,15 @@ const Playtest: NextPage = () => {
           onClick={() => router.push(`/about/characters/sc`)}
         >
           <h2 className={styles.selectBoxTitle}>Sc0</h2>
-          <Image src="/gifs/sc0.gif" alt="sc0" width={121} height={121} />
+          <Image
+            src="/gifs/sc0.gif"
+            alt="sc0"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
 
@@ -135,7 +172,15 @@ const Playtest: NextPage = () => {
           onClick={() => router.push(`/ami/species`)}
         >
           <h2 className={styles.selectBoxTitle}>Ami</h2>
-          <Image src="/ami/smoothome.png" alt="Ami" width={121} height={121} />
+          <Image
+            src="/ami/smoothome.png"
+            alt="Ami"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Gameplay */}
@@ -150,7 +195,10 @@ const Playtest: NextPage = () => {
             alt="gameplay"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
         {/* Enfer */}
@@ -160,7 +208,15 @@ const Playtest: NextPage = () => {
           onClick={() => router.push(`/game/enfer`)}
         >
           <h2 className={styles.selectBoxTitle}>Enfer</h2>
-          <Image src="/enfer/guard.png" alt="Enfer" width={121} height={121} />
+          <Image
+            src="/enfer/guard.png"
+            alt="Enfer"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}></p>
         </div>
       </div>
@@ -185,7 +241,10 @@ const Playtest: NextPage = () => {
               width={33}
               height={33}
               alt="Discord"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </a>
         </p>
         {/* Ami Mint Page */}
@@ -201,7 +260,10 @@ const Playtest: NextPage = () => {
               alt="artemisf"
               width={121}
               height={121}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <p className={styles.selectBoxDescription}>
               Minting will be available again soon.
             </p>
@@ -218,7 +280,10 @@ const Playtest: NextPage = () => {
               alt="playtest"
               width={121}
               height={121}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <p className={styles.selectBoxDescription}></p>
           </div>
         </div>

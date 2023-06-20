@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "../components/Index.module.css";
 
 const Game: NextPage = () => {
@@ -21,7 +21,10 @@ const Game: NextPage = () => {
             alt="gameplay"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Video Gameplay</p>
         </div>
 
@@ -32,7 +35,15 @@ const Game: NextPage = () => {
           onClick={() => router.push(`https://game.ahootdigital.com`)}
         >
           <h2 className={styles.selectBoxTitle}>Playtest</h2>
-          <Image src="/gifs/sc0.gif" alt="playtest" width={121} height={121} />
+          <Image
+            src="/gifs/sc0.gif"
+            alt="playtest"
+            width={121}
+            height={121}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>Closed Beta Playtests</p>
         </div>
         {/* About the Game */}
@@ -47,7 +58,10 @@ const Game: NextPage = () => {
             alt="gameplay"
             width={121}
             height={121}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className={styles.selectBoxDescription}>About Game</p>
         </div>
       </div>

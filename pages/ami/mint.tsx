@@ -19,7 +19,7 @@ import { useMemo, useState } from "react";
 import Timer from "../../components/Timer/timer";
 import styles from "./ami.module.css";
 import { parseIneligibility } from "../../util/parseIneligibility";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const Mint: NextPage = () => {
   const { contract: nftDrop } = useContract(citizenContract);
@@ -214,101 +214,102 @@ const Mint: NextPage = () => {
     quantity,
   ]);
 
-  return (
-    <>
-      <main className={styles.main}>
-        <h1 className={styles.title}></h1>
-        <p className={styles.description}></p>
-      </main>
-      <div className={styles.container}>
-        <div className={styles.mintInfoContainer}>
-          {isLoading ? (
-            <p>Loading...</p>
-          ) : (
-            <>
-              <div className={styles.infoSide}>
-                {/* Ami Type */}
+  return <>
+    <main className={styles.main}>
+      <h1 className={styles.title}></h1>
+      <p className={styles.description}></p>
+    </main>
+    <div className={styles.container}>
+      <div className={styles.mintInfoContainer}>
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <>
+            <div className={styles.infoSide}>
+              {/* Ami Type */}
 
-                <Image
-                  src="/gifs/ami.gif"
-                  alt="Type"
-                  width={300}
-                  height={300}
-                />
-                <h1>Ami Evolved</h1>
-              </div>
+              <Image
+                src="/gifs/ami.gif"
+                alt="Type"
+                width={300}
+                height={300}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
+              <h1>Ami Evolved</h1>
+            </div>
 
-              <div className={styles.imageSide}>
-                {claimConditions.data?.length === 0 ||
-                claimConditions.data?.every(
-                  (cc) => cc.maxClaimableSupply === "0"
-                ) ? (
-                  <div>
-                    <h2>
-                      Ami are no longer able to be minted indidually and are
-                      only able to be minted in game packs.
-                    </h2>
+            <div className={styles.imageSide}>
+              {claimConditions.data?.length === 0 ||
+              claimConditions.data?.every(
+                (cc) => cc.maxClaimableSupply === "0"
+              ) ? (
+                <div>
+                  <h2>
+                    Ami are no longer able to be minted indidually and are
+                    only able to be minted in game packs.
+                  </h2>
+                </div>
+              ) : !activeClaimCondition.data && claimConditions.data ? (
+                <div>
+                  <h2>Drop starts in:</h2>
+                  <Timer date={claimConditions.data[0].startTime} />
+                </div>
+              ) : (
+                <>
+                  <p>Mint Quantity</p>
+                  <div className={styles.quantityContainer}>
+                    <button
+                      className={`${styles.quantityControlButton}`}
+                      onClick={() => setQuantity(quantity - 1)}
+                      disabled={quantity <= 1}
+                    >
+                      -
+                    </button>
+
+                    <h4>{quantity}</h4>
+
+                    <button
+                      className={`${styles.quantityControlButton}`}
+                      onClick={() => setQuantity(quantity + 1)}
+                      disabled={quantity >= maxClaimable}
+                    >
+                      +
+                    </button>
                   </div>
-                ) : !activeClaimCondition.data && claimConditions.data ? (
-                  <div>
-                    <h2>Drop starts in:</h2>
-                    <Timer date={claimConditions.data[0].startTime} />
+
+                  <div className={styles.mintContainer}>
+                    {isSoldOut ? (
+                      <div>
+                        <h2>Next Wave Soon</h2>
+                      </div>
+                    ) : (
+                      <Web3Button
+                        contractAddress={nftDrop?.getAddress() || ""}
+                        action={(cntr) => cntr.erc721.claim(quantity)}
+                        isDisabled={!canClaim || buttonLoading}
+                        onError={(err) => {
+                          console.error(err);
+                          alert("Not Yet");
+                        }}
+                        onSuccess={() => {
+                          setQuantity(1);
+                          alert("Successfully claimed");
+                        }}
+                      >
+                        {buttonLoading ? "Loading..." : buttonText}
+                      </Web3Button>
+                    )}
                   </div>
-                ) : (
-                  <>
-                    <p>Mint Quantity</p>
-                    <div className={styles.quantityContainer}>
-                      <button
-                        className={`${styles.quantityControlButton}`}
-                        onClick={() => setQuantity(quantity - 1)}
-                        disabled={quantity <= 1}
-                      >
-                        -
-                      </button>
-
-                      <h4>{quantity}</h4>
-
-                      <button
-                        className={`${styles.quantityControlButton}`}
-                        onClick={() => setQuantity(quantity + 1)}
-                        disabled={quantity >= maxClaimable}
-                      >
-                        +
-                      </button>
-                    </div>
-
-                    <div className={styles.mintContainer}>
-                      {isSoldOut ? (
-                        <div>
-                          <h2>Next Wave Soon</h2>
-                        </div>
-                      ) : (
-                        <Web3Button
-                          contractAddress={nftDrop?.getAddress() || ""}
-                          action={(cntr) => cntr.erc721.claim(quantity)}
-                          isDisabled={!canClaim || buttonLoading}
-                          onError={(err) => {
-                            console.error(err);
-                            alert("Not Yet");
-                          }}
-                          onSuccess={() => {
-                            setQuantity(1);
-                            alert("Successfully claimed");
-                          }}
-                        >
-                          {buttonLoading ? "Loading..." : buttonText}
-                        </Web3Button>
-                      )}
-                    </div>
-                  </>
-                )}
-              </div>
-            </>
-          )}
-        </div>
+                </>
+              )}
+            </div>
+          </>
+        )}
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 
 export default Mint;

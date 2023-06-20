@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "../story.module.css";
 
 interface LoadImageProps {
@@ -8,7 +8,16 @@ interface LoadImageProps {
 }
 
 const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
-  <Image src={src} alt="load" layout="responsive" width={300} height={300} />
+  <Image
+    src={src}
+    alt="load"
+    width={300}
+    height={300}
+    sizes="100vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 
 const Arnav: NextPage = () => {
@@ -45,7 +54,15 @@ const Arnav: NextPage = () => {
         onClick={() => router.push(`/about/playtest`)}
       >
         <h2 className={styles.selectBoxTitle}>More Debrief</h2>
-        <Image src="/main/alice.png" alt="Characters" width={66} height={66} />
+        <Image
+          src="/main/alice.png"
+          alt="Characters"
+          width={66}
+          height={66}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <p className={styles.selectBoxDescription}></p>
       </div>
     </div>

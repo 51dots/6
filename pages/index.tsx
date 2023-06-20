@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "../components/Index.module.css";
 
 interface LoadImageProps {
@@ -11,11 +11,14 @@ const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
   <Image
     src={src}
     alt="Andromaverse"
-    layout="responsive"
     width={904}
     height={209}
-    sizes="(max-width: 768px) 100vw, 50vw" // Set different sizes for different screen widths
-  />
+    // Set different sizes for different screen widths
+    sizes="(max-width: 768px) 100vw, 50vw"
+    style={{
+      width: "100%",
+      height: "auto"
+    }} />
 );
 
 const Home: NextPage = () => {
@@ -41,8 +44,12 @@ const Home: NextPage = () => {
             alt="About"
             width={121}
             height={121}
-            sizes="(max-width: 768px) 50vw, 20vw" // Set different sizes for different screen widths
-          />
+            // Set different sizes for different screen widths
+            sizes="(max-width: 768px) 50vw, 20vw"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         {/* Theia Playtest */}{" "}
         {/*
@@ -75,8 +82,12 @@ const Home: NextPage = () => {
             alt="Collectibles"
             width={121}
             height={121}
-            sizes="(max-width: 768px) 50vw, 20vw" // Set different sizes for different screen widths
-          />
+            // Set different sizes for different screen widths
+            sizes="(max-width: 768px) 50vw, 20vw"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
 
