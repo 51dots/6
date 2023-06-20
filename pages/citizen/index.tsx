@@ -9,6 +9,9 @@ const Citizen = () => {
       <div className={styles.profileContainer}>
         <h1>Elite Alysian Citizens</h1>
       </div>
+      <div className={styles.profileContainer}>
+        <h2>Mint an Idendity Pack for Early Access</h2>
+      </div>
       <div className={styles.bigBox}>
         <Link href="/citizen/0">
           <div className={styles.circleLink}>

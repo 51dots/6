@@ -22,7 +22,6 @@
   display: flex;
   justify-content: center; /* Add justify-content property to center the content horizontally */
   align-items: center;
-  margin-bottom: 20px;
   width: 100%; /* Add width property to take up the full width */
 }
 

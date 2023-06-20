@@ -82,8 +82,8 @@ const Zero: React.FC = () => {
                     />{" "}
                   </a>
                   <Image
-                    src="/collection/area/lethe.png"
-                    alt="lethe"
+                    src="/collection/area/purplelight.png"
+                    alt="purplelight"
                     width={121}
                     height={121}
                     className={styles.roundedImage}
