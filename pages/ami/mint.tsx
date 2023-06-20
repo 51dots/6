@@ -19,7 +19,7 @@ import { useMemo, useState } from "react";
 import Timer from "../../components/Timer/timer";
 import styles from "./ami.module.css";
 import { parseIneligibility } from "../../util/parseIneligibility";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Mint: NextPage = () => {
   const { contract: nftDrop } = useContract(citizenContract);

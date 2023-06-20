@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./villages.module.css";
 import Timer from "../../../components/Timer/timer";
 import { sgpDate } from "../../../components/constant";
