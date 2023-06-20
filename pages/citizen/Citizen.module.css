@@ -11,25 +11,31 @@
 .citizenContainer {
   margin-top: 80px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: left;
+  justify-content: space-start;
   width: 100vw;
-  padding: 5%;
-  flex-wrap: wrap; /* Add flex-wrap property to wrap the boxes */
+  padding: 4%;
+  flex-wrap: wrap; 
 }
 
 .profileContainer {
   display: flex;
-  justify-content: center; /* Add justify-content property to center the content horizontally */
+  justify-content: center; 
   align-items: center;
-  width: 100%; /* Add width property to take up the full width */
+  width: 100%; 
+}
+
+.circleRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .circleLink {
   display: flex;
-  flex-basis: 30%;
+  flex-basis: calc(33.33% - 10px);
   justify-content: center;
-  padding: 3%;
+  padding: 1%;
   align-items: center;
   width: 100%;
 }
@@ -49,8 +55,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
-
+  align-items: left;
   margin-bottom: 20px;
 }
 

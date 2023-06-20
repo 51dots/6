@@ -13,21 +13,25 @@ const Citizen = () => {
         <h2>Mint an Idendity Pack for Early Access</h2>
       </div>
       <div className={styles.bigBox}>
-        <Link href="/citizen/0">
-          <div className={styles.circleLink}>
-            <Circle src="/citizen/pfp/0.png" />
-          </div>
-        </Link>
-        <Link href="/citizen/1">
-          <div className={styles.circleLink}>
-            <Circle src="/citizen/pfp/1.png" />
-          </div>
-        </Link>
-        <Link href="/citizen/3">
-          <div className={styles.circleLink}>
-            <Circle src="/citizen/pfp/3.png" />
-          </div>
-        </Link>
+        <div className={styles.circleRow}>
+          <Link href="/citizen/0">
+            <div className={styles.circleLink}>
+              <Circle src="/citizen/pfp/0.png" />
+            </div>
+          </Link>
+          <Link href="/citizen/8889">
+            <div className={styles.circleLink}>
+              <Circle src="/citizen/pfp/8889.png" />
+            </div>
+          </Link>
+          <Link href="/citizen/8900">
+            <div className={styles.circleLink}>
+              <Circle src="/citizen/pfp/8900.png" />
+            </div>
+          </Link>
+        </div>
+      </div>
+      <div className={styles.circleRow}>
         <Link href="/citizen/35">
           <div className={styles.circleLink}>
             <Circle src="/citizen/pfp/35.png" />

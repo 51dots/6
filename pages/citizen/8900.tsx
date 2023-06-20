@@ -14,10 +14,10 @@ const Zero: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles.nameContainer}>
-          <h1 className={styles.name}>Alysian Elite #3</h1>
+          <h1 className={styles.name}>Alysian Elite #8900</h1>
         </div>
         <div className={styles.imageBox}>
-          <Squares src="/citizen/3.png" />
+          <Squares src="/citizen/8900.png" />
         </div>
       </div>
       <div className={styles.box}>
@@ -72,9 +72,9 @@ const Zero: React.FC = () => {
               {activeTab === "bonded" && (
                 <>
                   {" "}
-                  <a href="/citizen/pfp/3.png">
+                  <a href="/citizen/pfp/8900.png">
                     <Image
-                      src="/citizen/pfp/3.png"
+                      src="/citizen/pfp/8900.png"
                       alt="pfp"
                       width={121}
                       height={121}
