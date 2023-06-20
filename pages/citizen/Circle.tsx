@@ -11,9 +11,9 @@ const LoadImage: React.FC<LoadImageProps> = ({ src }) => (
       src={src}
       alt="Load"
       layout="responsive"
-      width={200}
-      height={200}
-      sizes="(max-width: 768px) 100vw, 50vw"
+      width={900}
+      height={900}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 80vw"
     />
   </div>
 );

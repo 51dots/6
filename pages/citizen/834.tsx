@@ -14,10 +14,10 @@ const Zero: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles.nameContainer}>
-          <h1 className={styles.name}>Alysian Elite #0</h1>
+          <h1 className={styles.name}>Alysian Elite #834</h1>
         </div>
         <div className={styles.imageBox}>
-          <Squares src="/citizen/0.png" />
+          <Squares src="/citizen/834.png" />
         </div>
       </div>
       <div className={styles.box}>
@@ -65,16 +65,16 @@ const Zero: React.FC = () => {
         <div className={styles.imageBox}>
           <div className={styles.inventoryContainer}>
             <span className={styles.id}>
-              0xc6e9bEF4658c6B4318c629B36ac153de3428A3A1
+              0x25c23615b153c12fB6d94867e23B05cC9Da26Cb8
             </span>
             <div className={styles.gridContainer}>
               {/* Render Bonded items */}
               {activeTab === "bonded" && (
                 <>
                   {" "}
-                  <a href="/citizen/pfp/0.png">
+                  <a href="/citizen/pfp/834.png">
                     <Image
-                      src="/citizen/pfp/0.png"
+                      src="/citizen/pfp/834.png"
                       alt="pfp"
                       width={121}
                       height={121}
@@ -82,8 +82,8 @@ const Zero: React.FC = () => {
                     />{" "}
                   </a>
                   <Image
-                    src="/collection/area/purplelight.png"
-                    alt="light"
+                    src="/collection/area/lethe.png"
+                    alt="lethe"
                     width={121}
                     height={121}
                     className={styles.roundedImage}
@@ -96,7 +96,7 @@ const Zero: React.FC = () => {
                     className={styles.roundedImage}
                   />
                   <Image
-                    src="/collection/ami/chaos/magicc.png"
+                    src="/collection/ami/vixel/pirate.png"
                     alt="astra"
                     width={121}
                     height={121}

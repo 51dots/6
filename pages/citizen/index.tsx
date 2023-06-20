@@ -7,28 +7,38 @@ const Citizen = () => {
   return (
     <div className={styles.citizenContainer}>
       <div className={styles.profileContainer}>
-        <h1>Your Alysian Citizens</h1>
+        <h1>Elite Alysian Citizens</h1>
       </div>
       <div className={styles.bigBox}>
         <Link href="/citizen/0">
-          <a className={styles.circleLink}>
+          <div className={styles.circleLink}>
             <Circle src="/citizen/pfp/0.png" />
-          </a>
+          </div>
         </Link>
         <Link href="/citizen/1">
-          <a className={styles.circleLink}>
+          <div className={styles.circleLink}>
             <Circle src="/citizen/pfp/1.png" />
-          </a>
-        </Link>
-        <Link href="/citizen/2">
-          <a className={styles.circleLink}>
-            <Circle src="/citizen/pfp/2.png" />
-          </a>
+          </div>
         </Link>
         <Link href="/citizen/3">
-          <a className={styles.circleLink}>
+          <div className={styles.circleLink}>
             <Circle src="/citizen/pfp/3.png" />
-          </a>
+          </div>
+        </Link>
+        <Link href="/citizen/35">
+          <div className={styles.circleLink}>
+            <Circle src="/citizen/pfp/35.png" />
+          </div>
+        </Link>
+        <Link href="/citizen/571">
+          <div className={styles.circleLink}>
+            <Circle src="/citizen/pfp/571.png" />
+          </div>
+        </Link>
+        <Link href="/citizen/834">
+          <div className={styles.circleLink}>
+            <Circle src="/citizen/pfp/834.png" />
+          </div>
         </Link>
       </div>
     </div>

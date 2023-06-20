@@ -14,10 +14,10 @@ const Zero: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles.nameContainer}>
-          <h1 className={styles.name}>Alysian Elite #2</h1>
+          <h1 className={styles.name}>Alysian Elite #571</h1>
         </div>
         <div className={styles.imageBox}>
-          <Squares src="/citizen/2.png" />
+          <Squares src="/citizen/571.png" />
         </div>
       </div>
       <div className={styles.box}>
@@ -65,16 +65,16 @@ const Zero: React.FC = () => {
         <div className={styles.imageBox}>
           <div className={styles.inventoryContainer}>
             <span className={styles.id}>
-              0xc6e9bEF4658c6B4318c629B36ac153de3428A3A1
+              0x0d3cF6Bd45dfd2A1E2361268c5578E403b3fb477
             </span>
             <div className={styles.gridContainer}>
               {/* Render Bonded items */}
               {activeTab === "bonded" && (
                 <>
                   {" "}
-                  <a href="/citizen/pfp/2.png">
+                  <a href="/citizen/pfp/571.png">
                     <Image
-                      src="/citizen/pfp/2.png"
+                      src="/citizen/pfp/571.png"
                       alt="pfp"
                       width={121}
                       height={121}
@@ -96,7 +96,7 @@ const Zero: React.FC = () => {
                     className={styles.roundedImage}
                   />
                   <Image
-                    src="/collection/ami/astra/dragon.png"
+                    src="/collection/ami/prime/magic.png"
                     alt="astra"
                     width={121}
                     height={121}

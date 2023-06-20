@@ -82,8 +82,8 @@ const Zero: React.FC = () => {
                     />{" "}
                   </a>
                   <Image
-                    src="/collection/area/lethe.png"
-                    alt="lethe"
+                    src="/collection/area/purplelight.png"
+                    alt="purple"
                     width={121}
                     height={121}
                     className={styles.roundedImage}
@@ -96,8 +96,8 @@ const Zero: React.FC = () => {
                     className={styles.roundedImage}
                   />
                   <Image
-                    src="/collection/ami/astra/dragon.png"
-                    alt="astra"
+                    src="/collection/ami/smoot/og.png"
+                    alt="smoot"
                     width={121}
                     height={121}
                     className={styles.roundedImage}
